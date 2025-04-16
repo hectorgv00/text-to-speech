@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Conversor de Texto a Voz</title>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Conversor de Texto a Voz</h1>
+
+      <textarea
+        id="text-input"
+        placeholder="Escribe aquí..."
+        rows="6"
+      ></textarea>
+
+      <div class="controls">
+        <label for="voice-select">Voz:</label>
+        <select id="voice-select"></select>
+
+        <label for="rate">Velocidad: <span id="rate-value">1</span></label>
+        <input
+          type="range"
+          id="rate"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+        />
+      </div>
+
+      <button id="speak-btn">🔊 Reproducir</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
