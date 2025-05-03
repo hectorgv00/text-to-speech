@@ -18,26 +18,35 @@
 
       <textarea
         id="text-input"
-        placeholder="Escribe aquí..."
-        rows="6"
+        placeholder="Escribe el texto que quieres convertir a voz..."
       ></textarea>
 
       <div class="controls">
-        <label for="voice-select">Voz:</label>
-        <select id="voice-select"></select>
+        <div class="control-group">
+          <label for="voice-select">Seleccionar voz</label>
+          <select id="voice-select"></select>
+        </div>
 
-        <label for="rate">Velocidad: <span id="rate-value">1</span></label>
-        <input
-          type="range"
-          id="rate"
-          min="0.5"
-          max="2"
-          step="0.1"
-          value="1"
-        />
+        <div class="control-group">
+          <label for="rate">Velocidad de habla</label>
+          <div class="slider-container">
+            <input
+              type="range"
+              id="rate"
+              min="0.5"
+              max="2"
+              step="0.1"
+              value="1"
+            />
+            <span id="rate-value">1</span>
+          </div>
+        </div>
       </div>
 
-      <button id="speak-btn">🔊 Reproducir</button>
+      <button id="speak-btn">
+        <i class="fas fa-volume-up"></i>
+        Reproducir
+      </button>
     </div>
 
     <script src="script.js"></script>
